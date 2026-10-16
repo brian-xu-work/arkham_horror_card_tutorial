@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn to Play Arkham Horror: The Card Game</title>
+<meta name="description" content="A guided, click-along tutorial that takes you from opening the box to playing your first full round of Arkham Horror: The Card Game. No rulebook required.">
+<meta name="theme-color" content="#0b0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="topbar__brand" href="#top">
+    <span class="topbar__mark" aria-hidden="true">A</span>
+    <span class="topbar__title">Arkham Horror<span class="topbar__sub">Learn to Play</span></span>
+  </a>
+  <div class="topbar__meter" aria-hidden="true"><span class="topbar__meter-fill" data-progress-bar></span></div>
+  <button class="topbar__menu" data-menu-toggle aria-expanded="false" aria-controls="rail">
+    <span class="topbar__menu-label">Steps</span>
+    <span class="topbar__menu-count" data-current-step>1</span>
+  </button>
+</header>
+
+<nav class="rail" id="rail" data-rail aria-label="Tutorial steps">
+  <p class="rail__heading">Contents</p>
+  <ol class="rail__list" data-rail-list>
+    <li class="rail__part">Part I · Setup</li>
+    <li><a href="#step-1" data-step-link="1"><span class="rail__num">1</span> Choose your investigator</a></li>
+    <li><a href="#step-2" data-step-link="2"><span class="rail__num">2</span> Take your starter deck</a></li>
+    <li><a href="#step-3" data-step-link="3"><span class="rail__num">3</span> Set health &amp; sanity</a></li>
+    <li><a href="#step-4" data-step-link="4"><span class="rail__num">4</span> Set up the scenario</a></li>
+    <li><a href="#step-5" data-step-link="5"><span class="rail__num">5</span> Lay out Act &amp; Agenda</a></li>
+    <li><a href="#step-6" data-step-link="6"><span class="rail__num">6</span> Build the chaos bag</a></li>
+    <li><a href="#step-7" data-step-link="7"><span class="rail__num">7</span> Draw your opening hand</a></li>
+    <li><a href="#step-8" data-step-link="8"><span class="rail__num">8</span> Mulligan &amp; begin</a></li>
+    <li class="rail__part">Part II · The Round</li>
+    <li><a href="#step-9" data-step-link="9"><span class="rail__num">9</span> The round at a glance</a></li>
+    <li><a href="#step-10" data-step-link="10"><span class="rail__num">10</span> Mythos Phase</a></li>
+    <li><a href="#step-11" data-step-link="11"><span class="rail__num">11</span> Investigation Phase</a></li>
+    <li><a href="#step-12" data-step-link="12"><span class="rail__num">12</span> Skill tests</a></li>
+    <li><a href="#step-13" data-step-link="13"><span class="rail__num">13</span> Clues &amp; the Act</a></li>
+    <li><a href="#step-14" data-step-link="14"><span class="rail__num">14</span> Enemy Phase</a></li>
+    <li><a href="#step-15" data-step-link="15"><span class="rail__num">15</span> Upkeep Phase</a></li>
+    <li class="rail__part">Part III · Finishing</li>
+    <li><a href="#step-16" data-step-link="16"><span class="rail__num">16</span> Doom &amp; the Agenda</a></li>
+    <li><a href="#step-17" data-step-link="17"><span class="rail__num">17</span> Winning &amp; losing</a></li>
+    <li><a href="#step-18" data-step-link="18"><span class="rail__num">18</span> Quick reference</a></li>
+    <li class="rail__part">Play</li>
+    <li><a href="#playalong" data-step-link="19"><span class="rail__num">+</span> Put it together</a></li>
+    <li><a href="#quiz" data-step-link="20"><span class="rail__num">?</span> Test yourself</a></li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="hero" id="top" data-step="0">
+  <div class="hero__media" role="img" aria-label="A rowboat approaches a rocky island of cypress trees in a dark sea."></div>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">A co-operative card game · 1 to 4 investigators</p>
+    <h1 class="hero__title">Learn to play <em>Arkham Horror</em><br>the Card Game</h1>
+    <p class="hero__lede">A guided, click-along tutorial that takes you from opening the box to playing your first full round. No rulebook required.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#how">Start the tutorial</a>
+      <a class="btn btn--ghost" href="#step-9">Jump to the turn</a>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#how" aria-label="Scroll to start">
+    <span class="hero__scroll-line" aria-hidden="true"></span>
+    <span class="hero__scroll-text">Begin</span>
+  </a>
+</section>
+
+<section class="section section--intro" id="how" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="section__eyebrow">Read this first</p>
+    <h2 class="section__title">What is Arkham Horror?</h2>
+    <p class="lede">It is a co-operative card game for one to four players. Together you play a team of investigators in 1920s New England, working through a story scenario that is trying to destroy you. You win together, and you usually lose together.</p>
+    <div class="facts">
+      <div class="fact">
+        <span class="fact__value">1–4</span>
+        <span class="fact__label">Players</span>
+      </div>
+      <div class="fact">
+        <span class="fact__value">60–120<span class="fact__unit">min</span></span>
+        <span class="fact__label">Per scenario</span>
+      </div>
+      <div class="fact">
+        <span class="fact__value">14<span class="fact__unit">+</span></span>
+        <span class="fact__label">Age</span>
+      </div>
+      <div class="fact">
+        <span class="fact__value">Co-op</span>
+        <span class="fact__label">Everyone vs. the mythos</span>
+      </div>
+    </div>
+    <h3 class="section__subtitle">The goal of a scenario</h3>
+    <p>Every scenario asks the same two things. Gather <strong>clues</strong> at locations to advance the <strong>Act</strong> deck, which moves the story forward. All the while, <strong>doom</strong> piles up on the <strong>Agenda</strong> deck, a countdown that ends the game badly if it fills before you finish. Your job is to advance the Act before the Agenda runs out.</p>
+    <div class="howto">
+      <h3 class="section__subtitle">How to use this tutorial</h3>
+      <ul class="howto__list">
+        <li><span class="howto__badge">Work top to bottom</span> Every step is short. Do them in order.</li>
+        <li><span class="howto__badge">Click everything</span> Green boxes marked <em>Try it</em> are interactive. Play with them.</li>
+        <li><span class="howto__badge">Use the rail</span> Jump to any step from the contents list at the left.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="partband" data-reveal>
+  <div class="wrap">
+    <p class="partband__kicker">Part I</p>
+    <h2 class="partband__title">Setup</h2>
+    <p class="partband__text">Getting the table ready, one step at a time. Eight short steps and you are playing.</p>
+  </div>
+</div>
+
+<section class="section step" id="step-1" data-step="1" data-reveal>
+  <div class="wrap step__grid">
+    <div class="step__main">
+      <p class="step__label"><span class="step__num">Step 1</span> of 18</p>
+      <h2 class="step__title">Choose your investigator</h2>
+      <p>Each player picks one investigator. They are your character for the whole campaign: your stats, your deck, your health and sanity. The Core Set gives you five. For a first game, here are four that pair well together.</p>
+      <p>Every investigator has four stats. Higher is better. A <strong>4</strong> in Combat means you are good at fighting. A <strong>1</strong> means you should let someone else do it.</p>
+      <ul class="legend">
+        <li><span class="chip chip--will">Will</span> Resisting the horrors. Willpower tests.</li>
+        <li><span class="chip chip--int">Int</span> Finding clues and knowing things. Intellect tests.</li>
+        <li><span class="chip chip--com">Com</span> Hurting monsters. Combat tests.</li>
+        <li><span class="chip chip--agi">Agi</span> Dodging and sneaking. Agility tests.</li>
+      </ul>
+
+      <div class="investigators">
+        <article class="investigator">
+          <div class="investigator__art"><img src="assets/img/portrait-roland.jpg" alt="Portrait of a young man, 1920s." loading="lazy"></div>
+          <div class="investigator__body">
+            <p class="investigator__class">Guardian</p>
+            <h3 class="investigator__name">Roland Banks</h3>
+            <ul class="statline">
+              <li class="stat stat--will"><b>3</b><span>Will</span></li>
+              <li class="stat stat--int"><b>3</b><span>Int</span></li>
+              <li class="stat stat--com"><b>4</b><span>Com</span></li>
+              <li class="stat stat--agi"><b>2</b><span>Agi</span></li>
+            </ul>
+            <div class="vitals">
+              <span class="vitals__health">Health 9</span>
+              <span class="vitals__sanity">Sanity 5</span>
+            </div>
+            <p class="investigator__ability"><strong>Fight the good fight.</strong> After you defeat an enemy, discover 1 clue at your location.</p>
+          </div>
+        </article>
+
+        <article class="investigator">
+          <div class="investigator__art"><img src="assets/img/portrait-daisy.jpg" alt="Painted portrait of a woman in a hat, 1920s." loading="lazy"></div>
+          <div class="investigator__body">
+            <p class="investigator__class">Seeker</p>
+            <h3 class="investigator__name">Daisy Walker</h3>
+            <ul class="statline">
+              <li class="stat stat--will"><b>3</b><span>Will</span></li>
+              <li class="stat stat--int"><b>5</b><span>Int</span></li>
+              <li class="stat stat--com"><b>2</b><span>Com</span></li>
+              <li class="stat stat--agi"><b>2</b><span>Agi</span></li>
+            </ul>
+            <div class="vitals">
+              <span class="vitals__health">Health 5</span>
+              <span class="vitals__sanity">Sanity 9</span>
+            </div>
+            <p class="investigator__ability"><strong>Tome knowledge.</strong> Take an extra action each turn, used only to play or activate a Tome asset.</p>
+          </div>
+        </article>
+
+        <article class="investigator">
+          <div class="investigator__art"><img src="assets/img/portrait-agnes.jpg" alt="Painted portrait of a woman, 1920s." loading="lazy"></div>
+          <div class="investigator__body">
+            <p class="investigator__class">Mystic</p>
+            <h3 class="investigator__name">Agnes Baker</h3>
+            <ul class="statline">
+              <li class="stat stat--will"><b>5</b><span>Will</span></li>
+              <li class="stat stat--int"><b>2</b><span>Int</span></li>
+              <li class="stat stat--com"><b>2</b><span>Com</span></li>
+              <li class="stat stat--agi"><b>3</b><span>Agi</span></li>
+            </ul>
+            <div class="vitals">
+              <span class="vitals__health">Health 6</span>
+              <span class="vitals__sanity">Sanity 8</span>
+            </div>
+            <p class="investigator__ability"><strong>Rage of the ancients.</strong> After horror is placed on Agnes, deal 1 damage to an enemy at your location.</p>
+          </div>
+        </article>
+
+        <article class="investigator">
+          <div class="investigator__art"><img src="assets/img/portrait-wendy.jpg" alt="Painted portrait of a woman, 1920s." loading="lazy"></div>
+          <div class="investigator__body">
+            <p class="investigator__class">Survivor</p>
+            <h3 class="investigator__name">Wendy Adams</h3>
+            <ul class="statline">
+              <li class="stat stat--will"><b>4</b><span>Will</span></li>
+              <li class="stat stat--int"><b>3</b><span>Int</span></li>
+              <li class="stat stat--com"><b>1</b><span>Com</span></li>
+              <li class="stat stat--agi"><b>4</b><span>Agi</span></li>
+            </ul>
+            <div class="vitals">
+              <span class="vitals__health">Health 7</span>
+              <span class="vitals__sanity">Sanity 7</span>
+            </div>
+            <p class="investigator__ability"><strong>Escapist.</strong> Once per test, after drawing a chaos token, discard a card to draw a new one instead.</p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="callout callout--tip">
+        <p class="callout__title">Solo or a big table?</p>
+        <p>Two investigators is the sweet spot for learning. One is hard. Three or four means more monsters and more clues to find, but each player has less to do. Pick whatever fills the table.</p>
+      </aside>
+    </div>
+    <aside class="step__aside">
+      <p class="checklist__title">Setup checklist</p>
+      <ul class="checklist" data-checklist="setup">
+        <li><label><input type="checkbox" data-check="s1"><span>Investigator chosen</span></label></li>
+        <li><label><input type="checkbox" data-check="s2"><span>Starter deck taken</span></label></li>
+        <li><label><input type="checkbox" data-check="s3"><span>Health &amp; sanity set</span></label></li>
+        <li><label><input type="checkbox" data-check="s4"><span>Scenario laid out</span></label></li>
+        <li><label><input type="checkbox" data-check="s5"><span>Act &amp; Agenda placed</span></label></li>
+        <li><label><input type="checkbox" data-check="s6"><span>Chaos bag built</span></label></li>
+        <li><label><input type="checkbox" data-check="s7"><span>Opening hand drawn</span></label></li>
+        <li><label><input type="checkbox" data-check="s8"><span>Mulligan done</span></label></li>
+      </ul>
+      <button class="btn btn--quiet" data-checklist-reset>Reset checklist</button>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-2" data-step="2" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 2</span> of 18</p>
+    <h2 class="step__title">Take your starter deck</h2>
+    <p>The Core Set comes with a ready-made deck for every investigator, so you do not have to build anything for your first game. Find the deck listed for your investigator and take all <strong>30 cards</strong>.</p>
+    <div class="panel">
+      <h3 class="panel__title">What is in a deck</h3>
+      <div class="cardtypes">
+        <button class="cardtype" data-flip aria-pressed="false">
+          <span class="cardtype__face cardtype__face--front">
+            <span class="cardtype__tag">Asset</span>
+            <strong>Stays in play</strong>
+          </span>
+          <span class="cardtype__face cardtype__face--back">
+            <span class="cardtype__tag">Asset</span>
+            <span>A weapon, ally, or tool you keep on the table and use again and again. Most cost resources to play.</span>
+          </span>
+        </button>
+        <button class="cardtype" data-flip aria-pressed="false">
+          <span class="cardtype__face cardtype__face--front">
+            <span class="cardtype__tag">Event</span>
+            <strong>One and done</strong>
+          </span>
+          <span class="cardtype__face cardtype__face--back">
+            <span class="cardtype__tag">Event</span>
+            <span>A single trick you play for a one-time effect, then discard. Think of them as spells in other games.</span>
+          </span>
+        </button>
+        <button class="cardtype" data-flip aria-pressed="false">
+          <span class="cardtype__face cardtype__face--front">
+            <span class="cardtype__tag">Skill</span>
+            <strong>Boost a test</strong>
+          </span>
+          <span class="cardtype__face cardtype__face--back">
+            <span class="cardtype__tag">Skill</span>
+            <span>You never play a skill card on its own. You commit it to a test to add its icons, then discard it.</span>
+          </span>
+        </button>
+        <button class="cardtype" data-flip aria-pressed="false">
+          <span class="cardtype__face cardtype__face--front">
+            <span class="cardtype__tag">Weakness</span>
+            <strong>Bad news</strong>
+          </span>
+          <span class="cardtype__face cardtype__face--back">
+            <span class="cardtype__tag">Weakness</span>
+            <span>A forced drawback hiding in your deck. Every deck has at least one. You cannot get rid of it.</span>
+          </span>
+        </button>
+      </div>
+      <p class="panel__hint">Tap a card to flip it.</p>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Shuffle well</p>
+      <p>Shuffle your deck thoroughly. Because of weaknesses and your opening hand, a bad shuffle can sink a whole game before it starts.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-3" data-step="3" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 3</span> of 18</p>
+    <h2 class="step__title">Set your health and sanity</h2>
+    <p>Your investigator comes with two dials. Set them now and keep them in front of you for the whole game.</p>
+    <div class="duo">
+      <div class="duo__item duo__item--health">
+        <p class="duo__kicker">Health</p>
+        <p class="duo__text">How much physical punishment you can take. Damage from monsters comes out of health.</p>
+      </div>
+      <div class="duo__item duo__item--sanity">
+        <p class="duo__kicker">Sanity</p>
+        <p class="duo__text">How much your mind can bear. Horror from the mythos comes out of sanity.</p>
+      </div>
+    </div>
+    <table class="table">
+      <caption class="table__caption">Starting values</caption>
+      <thead>
+        <tr><th scope="col">Investigator</th><th scope="col">Health</th><th scope="col">Sanity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Roland Banks</td><td>9</td><td>5</td></tr>
+        <tr><td>Daisy Walker</td><td>5</td><td>9</td></tr>
+        <tr><td>Agnes Baker</td><td>6</td><td>8</td></tr>
+        <tr><td>Wendy Adams</td><td>7</td><td>7</td></tr>
+      </tbody>
+    </table>
+    <aside class="callout callout--warn">
+      <p class="callout__title">Reaching zero is fatal</p>
+      <p>If your health or sanity ever hits zero, your investigator is <strong>defeated</strong>: knocked out of the scenario. The team can still win, but you will be watching from the sidelines.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-4" data-step="4" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 4</span> of 18</p>
+    <h2 class="step__title">Set up the scenario</h2>
+    <p>A scenario is one chapter of the story. We will teach with the first scenario of the Core Set: <strong>&ldquo;The Gathering.&rdquo;</strong> Its setup card tells you exactly which cards to find and place.</p>
+    <ol class="numberlist">
+      <li><span class="numberlist__n">1</span> Find the cards named on the scenario setup card and set them aside.</li>
+      <li><span class="numberlist__n">2</span> Put the <strong>Study</strong> location into play. This is where everyone starts.</li>
+      <li><span class="numberlist__n">3</span> Place every investigator at the Study.</li>
+    </ol>
+    <figure class="figure">
+      <img src="assets/img/setup-desk.jpg" alt="A man seated at a desk in a study, photographed in the early twentieth century." loading="lazy">
+      <figcaption>The table becomes your board: a location, your investigator, your deck, and the story decks.</figcaption>
+    </figure>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Follow the card, not the internet</p>
+      <p>If you ever get stuck, the scenario card and the campaign guide are always right. They are written to be read aloud as you set up.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-5" data-step="5" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 5</span> of 18</p>
+    <h2 class="step__title">Lay out the Act and Agenda decks</h2>
+    <p>Two decks drive the story. Keep them apart.</p>
+    <div class="duo">
+      <div class="duo__item duo__item--act">
+        <p class="duo__kicker">Act deck</p>
+        <p class="duo__text">The objectives, your side of the story. Spend clues to advance it. Advancing the final Act usually wins the scenario.</p>
+      </div>
+      <div class="duo__item duo__item--agenda">
+        <p class="duo__kicker">Agenda deck</p>
+        <p class="duo__text">The villains' plan, and a countdown. Doom fills it up. If it advances past the last card, you probably lose.</p>
+      </div>
+    </div>
+    <p>Place the <strong>first card of each deck face up</strong> (the active Act and active Agenda). The rest stay face down in their piles.</p>
+    <div class="clock" data-clock aria-hidden="true">
+      <div class="clock__arc"></div>
+      <p class="clock__label">The Agenda is the clock. Watch the doom.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section step step--wide" id="step-6" data-step="6" data-reveal>
+  <div class="wrap">
+    <p class="step__label"><span class="step__num">Step 6</span> of 18</p>
+    <h2 class="step__title">Build the chaos bag</h2>
+    <p>This is the soul of the game. Whenever you attempt something risky, you pull a token from the bag at random and add its number to your test. Most tokens help a little. Some hurt. One is a disaster.</p>
+    <p>For the Core Set on <strong>Standard</strong> difficulty, the bag holds exactly 16 tokens:</p>
+    <div class="tokenrow" aria-hidden="true">
+      <span class="token token--good">+1</span>
+      <span class="token">0</span><span class="token">0</span>
+      <span class="token token--bad">−1</span><span class="token token--bad">−1</span><span class="token token--bad">−1</span>
+      <span class="token token--bad">−2</span><span class="token token--bad">−2</span>
+      <span class="token token--bad">−3</span>
+      <span class="token token--bad">−4</span>
+      <span class="token token--symbol">Skull</span>
+      <span class="token token--symbol">Cultist</span>
+      <span class="token token--symbol">Tablet</span>
+      <span class="token token--symbol">Elder Thing</span>
+      <span class="token token--fail">☠ Auto-Fail</span>
+      <span class="token token--sign">✶ Elder Sign</span>
+    </div>
+
+    <div class="bagbox" data-bag>
+      <div class="bagbox__intro">
+        <h3 class="bagbox__title">Try it: reach into the bag</h3>
+        <p>Pull tokens and watch how the odds feel. This is exactly what you will do on every skill test.</p>
+      </div>
+      <div class="bagbox__stage">
+        <div class="bag" aria-hidden="true">
+          <span class="bag__body" data-bag-drawn>?</span>
+        </div>
+        <div class="bagbox__controls">
+          <button class="btn btn--primary" data-bag-draw>Draw a token</button>
+          <button class="btn btn--quiet" data-bag-reset>Return tokens</button>
+          <p class="bagbox__stats" data-bag-stats aria-live="polite">16 tokens in the bag.</p>
+        </div>
+      </div>
+      <p class="bagbox__log-label">Tokens drawn this session</p>
+      <ol class="bagbox__log" data-bag-log></ol>
+    </div>
+
+    <aside class="callout callout--warn">
+      <p class="callout__title">The Auto-Fail</p>
+      <p>The tentacle token makes <strong>any</strong> test fail, no matter how high your skill is. There is always a chance the dark simply wins. This is the whole mood of the game in one token.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-7" data-step="7" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 7</span> of 18</p>
+    <h2 class="step__title">Draw your opening hand</h2>
+    <p>Shuffle your deck. Draw the top <strong>5 cards</strong>. This is your starting hand.</p>
+    <p>Each investigator also starts every scenario with <strong>5 resources</strong>. Set them out (any coins or tokens will do). Resources pay for the cards you play later.</p>
+    <div class="duo">
+      <div class="duo__item duo__item--hand">
+        <p class="duo__kicker">5 cards</p>
+        <p class="duo__text">Your opening hand. A hand of assets, events, and skills you can use from turn one.</p>
+      </div>
+      <div class="duo__item duo__item--res">
+        <p class="duo__kicker">5 resources</p>
+        <p class="duo__text">Your starting money. Cards cost resources to play, so running dry slows you down.</p>
+      </div>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Bad hand, no problem</p>
+      <p>A weak opening hand is normal, not a mistake. That is what the mulligan in the next step is for.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-8" data-step="8" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 8</span> of 18</p>
+    <h2 class="step__title">Mulligan, then begin</h2>
+    <p>Before the first round, you get one chance to swap out a bad hand. This is called the <strong>mulligan</strong>.</p>
+    <ol class="numberlist">
+      <li><span class="numberlist__n">1</span> Look at your 5 cards. Choose any number you do not want.</li>
+      <li><span class="numberlist__n">2</span> Set those aside and draw the same number of replacements.</li>
+      <li><span class="numberlist__n">3</span> Shuffle the cards you set aside back into your deck.</li>
+    </ol>
+    <p>If the new hand is worse, that is tough luck. You only get one mulligan.</p>
+    <p>Now read the scenario's introduction aloud, and choose a <strong>lead investigator</strong>. That player makes a few group decisions, like whose turn resolves first.</p>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Setup complete</p>
+      <p>The box, the board, the bag, your deck. Everything is ready. The story starts now.</p>
+    </aside>
+  </div>
+</section>
+
+<div class="partband" data-reveal>
+  <div class="wrap">
+    <p class="partband__kicker">Part II</p>
+    <h2 class="partband__title">The Round</h2>
+    <p class="partband__text">Every game is the same four phases, repeated. Learn the rhythm and you can play any scenario.</p>
+  </div>
+</div>
+
+<section class="section step step--wide" id="step-9" data-step="9" data-reveal>
+  <div class="wrap">
+    <p class="step__label"><span class="step__num">Step 9</span> of 18</p>
+    <h2 class="step__title">The round at a glance</h2>
+    <p>A game is a series of <strong>rounds</strong>. Each round runs through four phases in the same order, every time. Click each one.</p>
+    <div class="phases" data-phases>
+      <div class="phases__tabs" role="tablist" aria-label="The four phases">
+        <button class="phase-tab is-active" role="tab" aria-selected="true" data-phase-tab="mythos">
+          <span class="phase-tab__n">1</span>
+          <span class="phase-tab__name">Mythos</span>
+        </button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-phase-tab="investigation">
+          <span class="phase-tab__n">2</span>
+          <span class="phase-tab__name">Investigation</span>
+        </button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-phase-tab="enemy">
+          <span class="phase-tab__n">3</span>
+          <span class="phase-tab__name">Enemy</span>
+        </button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-phase-tab="upkeep">
+          <span class="phase-tab__n">4</span>
+          <span class="phase-tab__name">Upkeep</span>
+        </button>
+      </div>
+      <div class="phases__panels">
+        <article class="phase-panel is-active" data-phase-panel="mythos">
+          <h3>Mythos Phase</h3>
+          <p class="phase-panel__tagline">The game pushes back.</p>
+          <p>The story throws trouble at you. Doom advances the Agenda, and encounter cards bring monsters, treacheries, and curses. This phase happens to <em>everyone</em>.</p>
+        </article>
+        <article class="phase-panel" data-phase-panel="investigation">
+          <h3>Investigation Phase</h3>
+          <p class="phase-panel__tagline">This is your turn.</p>
+          <p>Each investigator takes <strong>three actions</strong>, one at a time, in any order you like. Move, investigate, fight, play cards. This is where you win or fall behind.</p>
+        </article>
+        <article class="phase-panel" data-phase-panel="enemy">
+          <h3>Enemy Phase</h3>
+          <p class="phase-panel__tagline">Monsters strike.</p>
+          <p>Every enemy in play moves and then attacks anyone it is engaged with. You do nothing here but take the hits and lose sanity.</p>
+        </article>
+        <article class="phase-panel" data-phase-panel="upkeep">
+          <h3>Upkeep Phase</h3>
+          <p class="phase-panel__tagline">Catch your breath.</p>
+          <p>Ready your exhausted cards, draw a card, gain a resource, and discard down to a hand of eight. Then the next round begins with Mythos again.</p>
+        </article>
+      </div>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">The rhythm</p>
+      <p>The game hurts you, you push forward, the monsters hit, you regroup. Once you feel that loop, you are playing.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-10" data-step="10" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 10</span> of 18</p>
+    <h2 class="step__title">Mythos Phase</h2>
+    <p>Two things happen, in order.</p>
+    <ol class="numberlist numberlist--big">
+      <li>
+        <span class="numberlist__n">1</span>
+        <div>
+          <strong>Advance the doom.</strong>
+          <p>Place 1 doom token on the active Agenda card. Always 1, unless a card says otherwise. If that fills the Agenda's doom threshold, the Agenda <strong>advances</strong> (that is bad, see Step 16).</p>
+        </div>
+      </li>
+      <li>
+        <span class="numberlist__n">2</span>
+        <div>
+          <strong>Draw encounter cards.</strong>
+          <p>The lead investigator draws 1 card from the encounter deck and resolves it, then the next player does the same, and so on. Encounter cards are enemies and treacheries. Everyone gets one, every round.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="duo">
+      <div class="duo__item duo__item--enemy">
+        <p class="duo__kicker">Enemy cards</p>
+        <p class="duo__text">A monster appears at your location, usually already engaged with you. You will need to fight or run next phase.</p>
+      </div>
+      <div class="duo__item duo__item--trick">
+        <p class="duo__kicker">Treachery cards</p>
+        <p class="duo__text">A trap or a curse. You usually test a skill to resist it, or it hurts you right away.</p>
+      </div>
+    </div>
+    <aside class="callout callout--warn">
+      <p class="callout__title">Do not skip this phase</p>
+      <p>New players forget the Mythos phase because it feels automatic. It is where most of your problems are born. Never skip it.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-11" data-step="11" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 11</span> of 18</p>
+    <h2 class="step__title">Investigation Phase</h2>
+    <p>This is the heart of your turn. Each investigator gets <strong>three actions</strong>, spent one at a time. You can spend them in any order and on any mix of the actions below.</p>
+    <div class="actions">
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Investigate</h3>
+        <p>Test <span class="chip chip--int">Int</span> against the location's shroud. Success finds <strong>1 clue</strong>.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Move</h3>
+        <p>Move to a connected location. Clues and danger live out there, so move often.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Fight</h3>
+        <p>Test <span class="chip chip--com">Com</span> against an engaged enemy. Success deals <strong>1 damage</strong> unless your weapon says more.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Evade</h3>
+        <p>Test <span class="chip chip--agi">Agi</span> against the enemy's evade value. Success exhausts it and breaks it off you.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Engage</h3>
+        <p>Pull an enemy at your location onto yourself, so it attacks you instead of a teammate.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Play a card</h3>
+        <p>Pay an asset or event's resource cost and put it into play from your hand.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Draw a card</h3>
+        <p>Draw 1 card. Useful when your hand is thin, wasteful when it is full.</p>
+      </article>
+      <article class="action">
+        <span class="action__cost">1 action</span>
+        <h3 class="action__name">Take a resource</h3>
+        <p>Gain 1 resource. Do this to afford an expensive asset next turn.</p>
+      </article>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Three actions is tight</p>
+      <p>You will almost never do everything you want. Choosing what to skip is the actual game. Spending all three moving feels bad, but so does standing still while doom climbs.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step step--wide step--focus" id="step-12" data-step="12" data-reveal>
+  <div class="wrap">
+    <p class="step__label"><span class="step__num">Step 12</span> of 18 · the core mechanic</p>
+    <h2 class="step__title">Skill tests</h2>
+    <p>Every risky action, and every treachery, is resolved with a <strong>skill test</strong>. Learn this and you have learned the game. Build one below, then draw the token.</p>
+
+    <div class="skilltest" data-skilltest>
+      <div class="skilltest__top">
+        <div class="skilltest__field">
+          <span class="skilltest__label">Base skill value</span>
+          <div class="stepper" data-base-stepper>
+            <button class="stepper__btn" data-base-down aria-label="Decrease base skill">−</button>
+            <span class="stepper__value" data-base-value>3</span>
+            <button class="stepper__btn" data-base-up aria-label="Increase base skill">+</button>
+          </div>
+          <span class="skilltest__hint">Your stat for the test.</span>
+        </div>
+        <div class="skilltest__field">
+          <span class="skilltest__label">Test difficulty</span>
+          <div class="stepper" data-diff-stepper>
+            <button class="stepper__btn" data-diff-down aria-label="Decrease difficulty">−</button>
+            <span class="stepper__value" data-diff-value>3</span>
+            <button class="stepper__btn" data-diff-up aria-label="Increase difficulty">+</button>
+          </div>
+          <span class="skilltest__hint">Set by the location or card.</span>
+        </div>
+      </div>
+
+      <div class="skilltest__commit">
+        <span class="skilltest__label">Commit cards from your hand (optional)</span>
+        <div class="commit-row" data-commit-row>
+          <button class="commit-card" data-commit="1"><span class="commit-card__icon chip--int">Int</span><b>+1</b><span class="commit-card__name">Deduction</span></button>
+          <button class="commit-card" data-commit="2"><span class="commit-card__icon chip--int">Int</span><b>+2</b><span class="commit-card__name">Eureka!</span></button>
+          <button class="commit-card" data-commit="1"><span class="commit-card__icon chip--will">Will</span><b>+1</b><span class="commit-card__name">Guts</span></button>
+          <button class="commit-card" data-commit="2"><span class="commit-card__icon chip--com">Com</span><b>+2</b><span class="commit-card__name">Vicious Blow</span></button>
+        </div>
+        <p class="skilltest__hint">Committed cards add their icons to your value. You discard them whatever happens.</p>
+      </div>
+
+      <div class="skilltest__go">
+        <button class="btn btn--primary" data-test-draw>Reveal a chaos token</button>
+        <button class="btn btn--quiet" data-test-reset>Reset</button>
+      </div>
+
+      <div class="skilltest__math" data-test-math aria-live="polite">
+        <div class="mathline">
+          <span class="mathline__k">Base</span><span class="mathline__v" data-math-base>3</span>
+        </div>
+        <div class="mathline">
+          <span class="mathline__k">Committed</span><span class="mathline__v" data-math-commit>+0</span>
+        </div>
+        <div class="mathline mathline--token">
+          <span class="mathline__k">Chaos token</span><span class="mathline__v" data-math-token>—</span>
+        </div>
+        <div class="mathline mathline--total">
+          <span class="mathline__k">Total vs. difficulty</span><span class="mathline__v" data-math-total>3 vs 3</span>
+        </div>
+        <p class="skilltest__verdict" data-test-verdict>Set it up, then reveal a token.</p>
+      </div>
+    </div>
+
+    <div class="skilltest__steps">
+      <h3 class="section__subtitle">The four steps of any test</h3>
+      <ol class="numberlist numberlist--big">
+        <li><span class="numberlist__n">1</span><div><strong>Choose the skill.</strong><p>Investigate uses Intellect. Fight uses Combat. Evade uses Agility. A treachery names the skill it wants.</p></div></li>
+        <li><span class="numberlist__n">2</span><div><strong>Commit cards, if you want.</strong><p>Discard cards from hand to add matching icons to your value. Optional, but often the difference between pass and fail.</p></div></li>
+        <li><span class="numberlist__n">3</span><div><strong>Reveal a chaos token.</strong><p>Draw one at random and apply its modifier. The Auto-Fail makes the whole test fail. The Elder Sign usually helps a lot.</p></div></li>
+        <li><span class="numberlist__n">4</span><div><strong>Compare to difficulty.</strong><p>If your total is <strong>equal to or higher</strong> than the difficulty, you succeed. A tie counts as a win.</p></div></li>
+      </ol>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Ties succeed</p>
+      <p>The single most common beginner error is forgetting that <strong>matching</strong> the difficulty counts as success. Total 3 against difficulty 3 is a win.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-13" data-step="13" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 13</span> of 18</p>
+    <h2 class="step__title">Clues, locations, and the Act</h2>
+    <p>Clues are how you make progress. You find them by <strong>investigating</strong>, and you spend them to <strong>advance the Act</strong>.</p>
+    <ol class="numberlist">
+      <li><span class="numberlist__n">1</span> Investigate a location that has clues. Success finds 1 clue (some cards find more).</li>
+      <li><span class="numberlist__n">2</span> Collect clues as a team. They are shared progress, not personal points.</li>
+      <li><span class="numberlist__n">3</span> When the team has the number of clues the Act requires, and you are at the right place, spend them to <strong>advance the Act</strong>.</li>
+    </ol>
+    <div class="locations">
+      <figure class="location">
+        <img src="assets/img/location-bank.jpg" alt="A historic bank building in Providence, Rhode Island." loading="lazy">
+        <figcaption><strong>Shroud</strong> is a location's difficulty. Investigating a shroud 4 location is a hard Intellect test.</figcaption>
+      </figure>
+      <figure class="location">
+        <img src="assets/img/location-arsenal.jpg" alt="A historic state arsenal building in Providence, Rhode Island." loading="lazy">
+        <figcaption>Locations connect to each other. A <strong>Move</strong> action takes you along one connection.</figcaption>
+      </figure>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Clues or safety?</p>
+      <p>Clues win the game but fighting keeps you alive. The tension between the two is the whole design. If you spend every action investigating, the monsters will eat you.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-14" data-step="14" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 14</span> of 18</p>
+    <h2 class="step__title">Enemy Phase</h2>
+    <p>Now the monsters get their turn. Every enemy in play, in order, does two things.</p>
+    <ol class="numberlist numberlist--big">
+      <li><span class="numberlist__n">1</span><div><strong>Move or stay.</strong><p>If the enemy is not engaged with anyone, it moves toward the nearest investigator along the shortest path. If it is engaged, it stays put and prepares to attack.</p></div></li>
+      <li><span class="numberlist__n">2</span><div><strong>Attack what it is engaged with.</strong><p>Each enemy engaged with an investigator attacks that investigator: the enemy deals its <strong>damage</strong> and its <strong>horror</strong> to them. This is where health and sanity drain fast.</p></div></li>
+    </ol>
+
+    <div class="combat" data-combat>
+      <div class="combat__enemy">
+        <div class="combat__art" aria-hidden="true"></div>
+        <div class="combat__meta">
+          <p class="combat__tag">Enemy · Ghoul</p>
+          <h3 class="combat__name">Swamp Lurker</h3>
+          <ul class="enemystats">
+            <li><span>Fight</span><b>3</b></li>
+            <li><span>Health</span><b data-enemy-hp>4</b></li>
+            <li><span>Evade</span><b>3</b></li>
+            <li><span>Damage</span><b>1</b></li>
+            <li><span>Horror</span><b>1</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="combat__play">
+        <p class="combat__prompt" data-combat-prompt>It is on you. Fight it down, or slip away.</p>
+        <div class="combat__btns">
+          <button class="btn btn--primary" data-combat-fight>Fight it (1 action)</button>
+          <button class="btn btn--ghost" data-combat-evade>Evade it (1 action)</button>
+          <button class="btn btn--quiet" data-combat-reset>Reset</button>
+        </div>
+        <ul class="combat__log" data-combat-log aria-live="polite"></ul>
+      </div>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Exhausted enemies cannot attack</p>
+      <p>A successfully evaded enemy is <strong>exhausted</strong>. It will not attack this round, and it stays off you until it readies again in Upkeep. Evading buys time.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-15" data-step="15" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 15</span> of 18</p>
+    <h2 class="step__title">Upkeep Phase</h2>
+    <p>The round winds down. Every investigator does four things, in order.</p>
+    <ol class="numberlist numberlist--big">
+      <li><span class="numberlist__n">1</span><div><strong>Ready your cards.</strong><p>Turn all your exhausted cards upright again. They are usable next round.</p></div></li>
+      <li><span class="numberlist__n">2</span><div><strong>Draw a card.</strong><p>Draw 1 card from your deck. If your deck runs out, you take 1 horror and shuffle your discard back in as a new deck.</p></div></li>
+      <li><span class="numberlist__n">3</span><div><strong>Gain a resource.</strong><p>Take 1 resource. A slow but steady income for the big cards.</p></div></li>
+      <li><span class="numberlist__n">4</span><div><strong>Discard down to eight.</strong><p>If you hold more than 8 cards, discard until you have 8. Hand size limit is 8.</p></div></li>
+    </ol>
+    <p>Then the round is over, and the next one begins with the Mythos phase.</p>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Do not forget the ready step</p>
+      <p>It is easy to lose track of which cards were exhausted. Flip everything upright here so next turn is clean.</p>
+    </aside>
+  </div>
+</section>
+
+<div class="partband" data-reveal>
+  <div class="wrap">
+    <p class="partband__kicker">Part III</p>
+    <h2 class="partband__title">Finishing</h2>
+    <p class="partband__text">How a scenario ends, and the quick reference you will come back to.</p>
+  </div>
+</div>
+
+<section class="section step" id="step-16" data-step="16" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 16</span> of 18</p>
+    <h2 class="step__title">Doom and the Agenda</h2>
+    <p>Doom is the clock that ends the game badly. It only ever goes up, and it is always one step ahead of your plans.</p>
+    <ol class="numberlist numberlist--big">
+      <li><span class="numberlist__n">1</span><div><strong>Doom accumulates all round.</strong><p>You add 1 in the Mythos phase, and some encounter cards and enemies add more. Doom on a card counts toward the total on the active Agenda.</p></div></li>
+      <li><span class="numberlist__n">2</span><div><strong>When doom fills the Agenda, it advances.</strong><p>Flip to the next Agenda card and follow its text. Often this is a catastrophe: a monster arrives, or the story lurches forward on the villain's terms.</p></div></li>
+      <li><span class="numberlist__n">3</span><div><strong>Advance the Act to win.</strong><p>Your counterplay is clues. Finish the Act before the last Agenda runs out.</p></div></li>
+    </ol>
+    <figure class="figure figure--dark">
+      <img src="assets/img/enemy-jellyfish.jpg" alt="A detailed natural-history illustration of jellyfish, nineteenth century." loading="lazy">
+      <figcaption>Cosmic horror, drawn from life. The Artist&rsquo;s plates are eerily close to the game&rsquo;s monsters.</figcaption>
+    </figure>
+    <aside class="callout callout--warn">
+      <p class="callout__title">Do not treat doom as a timer you can ignore</p>
+      <p>New players happily investigate for several rounds and then are shocked when the Agenda advances twice in a row. Count the doom out loud if you must.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step" id="step-17" data-step="17" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="step__label"><span class="step__num">Step 17</span> of 18</p>
+    <h2 class="step__title">Winning and losing</h2>
+    <div class="outcomes">
+      <article class="outcome outcome--win">
+        <h3>You win when</h3>
+        <ul>
+          <li>The Act deck reaches its final objective and the team resolves it.</li>
+          <li>The scenario's resolution text says so. Often this means finishing with a set number of clues or in a specific place.</li>
+        </ul>
+      </article>
+      <article class="outcome outcome--lose">
+        <h3>You lose when</h3>
+        <ul>
+          <li>All investigators are defeated. No one is left to act.</li>
+          <li>The Agenda deck advances past its last card. The villains win the chapter.</li>
+          <li>A card says the scenario ends in failure (some resolutions are a loss on purpose).</li>
+        </ul>
+      </article>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">Losing is part of the story</p>
+      <p>Arkham Horror is meant to be brutal. A scenario you lose still moves the campaign forward, with consequences you carry into the next one. Do not fear a loss; learn from it.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section step step--wide" id="step-18" data-step="18" data-reveal>
+  <div class="wrap">
+    <p class="step__label"><span class="step__num">Step 18</span> of 18</p>
+    <h2 class="step__title">Quick reference</h2>
+    <p>Everything above, compressed. Keep this step open at the table.</p>
+    <div class="cheat">
+      <article class="cheat__col">
+        <h3 class="cheat__head">The round</h3>
+        <ol class="cheat__list">
+          <li><b>Mythos.</b> Add 1 doom, draw an encounter card.</li>
+          <li><b>Investigation.</b> 3 actions each.</li>
+          <li><b>Enemy.</b> Enemies move and attack.</li>
+          <li><b>Upkeep.</b> Ready, draw 1, +1 resource, discard to 8.</li>
+        </ol>
+      </article>
+      <article class="cheat__col">
+        <h3 class="cheat__head">The 3 actions</h3>
+        <ul class="cheat__list cheat__list--tight">
+          <li>Investigate <span class="chip chip--int">Int</span></li>
+          <li>Move</li>
+          <li>Fight <span class="chip chip--com">Com</span></li>
+          <li>Evade <span class="chip chip--agi">Agi</span></li>
+          <li>Engage</li>
+          <li>Play a card</li>
+          <li>Draw a card</li>
+          <li>Take a resource</li>
+        </ul>
+      </article>
+      <article class="cheat__col">
+        <h3 class="cheat__head">Skill test</h3>
+        <ol class="cheat__list">
+          <li>Pick the skill.</li>
+          <li>Commit cards (optional).</li>
+          <li>Reveal a chaos token.</li>
+          <li>Total ≥ difficulty means success.</li>
+        </ol>
+        <p class="cheat__note">Ties succeed. The Auto-Fail always fails.</p>
+      </article>
+      <article class="cheat__col">
+        <h3 class="cheat__head">Watch the clock</h3>
+        <ul class="cheat__list cheat__list--tight">
+          <li>Spend clues to advance the Act.</li>
+          <li>Doom fills the Agenda.</li>
+          <li>Zero health or sanity defeats you.</li>
+          <li>Last Agenda advancing often ends the game.</li>
+        </ul>
+      </article>
+    </div>
+    <aside class="callout callout--tip">
+      <p class="callout__title">That is the whole game</p>
+      <p>Setup, four phases, skill tests, clues, doom. Set up &ldquo;The Gathering&rdquo; and play a round. It will click faster at the table than it ever does on a screen.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section playalong" id="playalong" data-step="19" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="section__eyebrow section__eyebrow--single">Put it together</p>
+    <h2 class="section__title">One full round, step by step</h2>
+    <p class="lede">Roland Banks is alone in the Study, three actions to spend and an Agenda filling with doom. Follow his first round, click by click.</p>
+    <div class="playthrough" data-playthrough>
+      <div class="playthrough__stage">
+        <p class="playthrough__phase" data-pt-phase>Mythos Phase</p>
+        <h3 class="playthrough__title" data-pt-title>Doom gathers</h3>
+        <p class="playthrough__text" data-pt-text>One doom goes onto the Agenda. Then Roland draws an encounter card and a Ghoul claws its way in, engaged with him.</p>
+        <div class="playthrough__state" data-pt-state>
+          <span class="state-chip">Health 9</span>
+          <span class="state-chip">Sanity 5</span>
+          <span class="state-chip">Actions 0</span>
+          <span class="state-chip state-chip--bad">Enemy: Ghoul</span>
+        </div>
+      </div>
+      <div class="playthrough__controls">
+        <button class="btn btn--ghost" data-pt-prev disabled>Back</button>
+        <div class="playthrough__dots" data-pt-dots></div>
+        <button class="btn btn--primary" data-pt-next>Next</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section quiz" id="quiz" data-step="20" data-reveal>
+  <div class="wrap wrap--narrow">
+    <p class="section__eyebrow section__eyebrow--single">Check yourself</p>
+    <h2 class="section__title">Test yourself</h2>
+    <p class="lede">Six questions. Pick an answer to see why it is right or wrong. No score kept, no pressure.</p>
+    <div class="quizbox" data-quiz>
+      <div class="quizbox__progress"><span data-quiz-progress-bar></span></div>
+      <p class="quizbox__count" data-quiz-count>Question 1 of 6</p>
+      <div class="quizbox__body" data-quiz-body></div>
+      <div class="quizbox__foot">
+        <p class="quizbox__score" data-quiz-score>Score 0 / 6</p>
+        <button class="btn btn--quiet" data-quiz-restart hidden>Start over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section credits" data-reveal>
+  <div class="wrap wrap--narrow">
+    <h2 class="section__title section__title--sm">About this tutorial</h2>
+    <p>An unofficial, non-commercial fan tutorial. <em>Arkham Horror: The Card Game</em> and all related names and terminology are trademarks of Fantasy Flight Games. No game components or card art are reproduced here.</p>
+    <p>All imagery is public-domain or openly licensed, sourced from Wikimedia Commons. Illustrations by Arnold Böcklin, Ernst Haeckel, and others; photographs from the Library of Congress and other archives. Full credits with source links are in <code>CREDITS.md</code>.</p>
+    <p class="credits__hint">Built as a static site. Open <code>index.html</code> directly, or serve the folder from any web host.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="footer__brand">Arkham Horror · Learn to Play</p>
+    <p class="footer__note">An unofficial fan-made tutorial. Play the real thing. It is worth it.</p>
+    <a class="footer__top" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="js/chaos-bag.js" defer></script>
+<script src="js/quiz.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
