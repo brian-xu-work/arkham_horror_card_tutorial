@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 (function () {
   "use strict";
 
@@ -158,6 +160,7 @@
       "</div>";
     scoreEl.textContent = "Score " + score + " / " + QUESTIONS.length;
     restart.hidden = false;
+    track("quiz_completed", { score: score, total: QUESTIONS.length });
   }
 
   restart.addEventListener("click", function () {

@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 (function () {
   "use strict";
 
@@ -106,14 +108,20 @@
   if (checklist) {
     var KEY = "ah-checklist";
     var saved = {};
+    var setupTracked = false;
+    var checks = Array.prototype.slice.call(checklist.querySelectorAll("input[data-check]"));
     try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
 
-    Array.prototype.forEach.call(checklist.querySelectorAll("input[data-check]"), function (input) {
+    checks.forEach(function (input) {
       var id = input.getAttribute("data-check");
       if (saved[id]) input.checked = true;
       input.addEventListener("change", function () {
         saved[id] = input.checked;
         try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+        if (!setupTracked && checks.length && checks.every(function (i) { return i.checked; })) {
+          setupTracked = true;
+          track("setup_completed", {});
+        }
       });
     });
 

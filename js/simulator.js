@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 (function () {
   "use strict";
 
@@ -120,6 +122,7 @@
     if (S.status !== "playing") return;
     if (S.hp <= 0) { S.status = "lost"; S.loseReason = "Roland was defeated by damage."; log("Health hit zero. Roland is defeated.", "bad"); }
     else if (S.san <= 0) { S.status = "lost"; S.loseReason = "Roland was driven insane."; log("Sanity hit zero. Roland is defeated.", "bad"); }
+    if (S.status === "lost") track("sim_round_lost", { round: S.round, reason: S.loseReason });
   }
 
   /* ============ phases ============ */
@@ -374,6 +377,7 @@
     S.actAdvanced = true;
     S.status = "won";
     log("Roland spends 2 clues and advances the Act. The story moves on, and the chapter is won.", "good");
+    track("sim_round_won", { round: S.round });
     render();
   }
 

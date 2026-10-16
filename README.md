@@ -1,7 +1,7 @@
 # Learn to Play Arkham Horror: The Card Game
 
 An interactive, static tutorial that teaches someone how to play *Arkham Horror: The Card Game* from
-setup to their first full round. No rulebook, no build step, no dependencies to install.
+setup to their first full round. No rulebook required.
 
 It walks through the game step by step, drops small interactive toys at the points that actually
 matter (the chaos bag, skill tests), and finishes with a playable round where you spend Roland
@@ -32,41 +32,52 @@ Lighthouse scores are 100 for accessibility, best practices, and SEO.
 
 ## Quick start
 
-No build. Pick one:
-
-**Open it directly**
+Requires Node 18 or newer (built with Node 24).
 
 ```bash
-open index.html
+npm install
+npm run dev      # dev server at http://localhost:5173
+npm run build    # production build into dist/
+npm run preview  # serve the production build locally
 ```
 
-**Serve the folder** (recommended, avoids any `file://` quirks)
+The site uses ES modules, so it must be served over HTTP. Opening `index.html` directly from the
+filesystem will not work; use the dev server, `npm run preview`, or a static host.
 
-```bash
-python3 -m http.server 8765
-# then visit http://localhost:8765
-```
+## Deploying to Vercel
 
-Any static host works: GitHub Pages, Netlify, Vercel, S3, nginx. There is no server code and no
-runtime dependencies beyond an optional Google Fonts request.
+1. Import the repo at [vercel.com/new](https://vercel.com/new).
+2. Framework preset: **Vite** (auto-detected). Build command `npm run build`, output directory `dist`.
+3. Deploy.
 
-## Deploying to GitHub Pages
+## Analytics
 
-1. Push the repo to GitHub.
-2. Settings, Pages, Source: `main` branch, `/ (root)`.
-3. Wait a minute. Done.
+Uses the official [`@vercel/analytics`](https://www.npmjs.com/package/@vercel/analytics) package.
+`js/main.js` calls `inject()`, which loads the Vercel insights script in production. Analytics only
+collects on Vercel deployments, and never in development mode.
 
-The site is fully self-contained once `assets/img/` is populated, so it also works offline.
+Custom events are sent with `track()`:
+
+| Event | Fired when | Properties |
+| --- | --- | --- |
+| `setup_completed` | every box in the setup checklist is ticked | none |
+| `quiz_completed` | the quiz reaches its results screen | `score`, `total` |
+| `sim_round_won` | the playable round advances the Act | `round` |
+| `sim_round_lost` | the investigator is defeated in the playable round | `round`, `reason` |
+
+Enable **Web Analytics** for the project in the Vercel dashboard to start collecting.
 
 ## Project structure
 
 ```
 index.html              all content and markup
 css/styles.css          design system and components
+js/main.js              entry point: calls inject() and imports the modules below
 js/app.js               nav, scroll-spy, reveal animations, phase tabs, checklist, playthrough, combat demo
 js/chaos-bag.js         chaos bag widget and the skill-test builder
 js/simulator.js         the playable round engine
 js/quiz.js              scored quiz
+vite.config.js          Vite build config
 scripts/fetch-assets.sh downloads the public-domain imagery
 assets/img/             images (public domain, see CREDITS.md)
 CREDITS.md              image sources and licenses
@@ -97,8 +108,8 @@ missing. See [CREDITS.md](CREDITS.md) for the full list of sources and licenses.
 
 ## Tech
 
-Plain HTML, CSS, and vanilla JavaScript. No framework, no bundler, no npm install. Fonts are
-Cinzel and EB Garamond via Google Fonts.
+Plain HTML, CSS, and vanilla JavaScript, bundled with [Vite](https://vitejs.dev/). The only runtime
+dependency is `@vercel/analytics`. Fonts are Cinzel and EB Garamond via Google Fonts.
 
 ## Credits and license
 

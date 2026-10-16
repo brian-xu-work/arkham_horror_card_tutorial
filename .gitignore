@@ -1,3 +1,10 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
 # JetBrains IDEs
 .idea/
 
